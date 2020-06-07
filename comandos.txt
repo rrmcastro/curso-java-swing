@@ -1,3 +1,7 @@
+Para esse ticket foi solicitado que removessemos tudo desse arquivo
+
+Comandos Git
+
 Lista de comandos (Terminal Bash)
 pwd - apresenta o caminho da pasta
 ls - lista o conteudo da pasta
