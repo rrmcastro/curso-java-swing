@@ -1,0 +1,17 @@
+Lista de comandos (Terminal Bash)
+pwd - apresenta o caminho da pasta
+ls - lista o conteudo da pasta
+mkdir - criar nova pasta
+ctrl + l - limpa a tela do bash
+rm -r - excluir para sem mensagem para o usuario
+
+
+
+comandos git
+git log --oneline - lista todos do commits de uma branch
+git status - mostra as alterações feitas no projeto
+git commit -m  - criar um novo commit com mensagem 
+
+Como fazer um README Bonitão
+https://medium.com/@raullesteves/github-como-fazer-um-readme-md-bonit%C3%A3o-c85c8f154f8
+
