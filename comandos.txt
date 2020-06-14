@@ -1,3 +1,7 @@
+Para esse ticket foi solicitado que removessemos tudo desse arquivo
+
+Comandos Git
+
 Lista de comandos (Terminal Bash)
 pwd - apresenta o caminho da pasta
 ls - lista o conteudo da pasta
@@ -17,9 +21,7 @@ git restore --staged - remover o arquivo da stage area
 history - lista todos os ultimos comandos feitos
 git checkout -b  <nome-branch> - criar uma nova branch
 git branch -l - listar as branchs locais
-git pull origin - baixa todas as atualizações da branch
-
-git branch -D <nome-branch> - deleta branch
+git branch -D <nome-branch>
 
 
 Como fazer um README Bonitão
