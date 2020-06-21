@@ -1,7 +1,5 @@
 package br.com.cadastro.model;
 
-import java.time.LocalDate;
-
 public class Cliente {
 
 	private Long id;
@@ -9,11 +7,22 @@ public class Cliente {
 	private String codigoCliente;
 	private String nome;
 	private String razaoSocial;
-	private LocalDate dataCadastro;
+	private String dataCadastro;
 	private String cnpj;
 	private String telefone;
 	
 	
+
+	public Cliente(Long matricula, String codigoCliente, String nome, String razaoSocial, 
+			String cnpj, String telefone) {
+		super();
+		this.matricula = matricula;
+		this.codigoCliente = codigoCliente;
+		this.nome = nome;
+		this.razaoSocial = razaoSocial;
+		this.cnpj = cnpj;
+		this.telefone = telefone;
+	}
 
 	public Long getMatricula() {
 		return matricula;
@@ -47,11 +56,11 @@ public class Cliente {
 		this.razaoSocial = razaoSocial;
 	}
 
-	public LocalDate getDataCadastro() {
+	public String getDataCadastro() {
 		return dataCadastro;
 	}
 
-	public void setDataCadastro(LocalDate dataCadastro) {
+	public void setDataCadastro(String dataCadastro) {
 		this.dataCadastro = dataCadastro;
 	}
 

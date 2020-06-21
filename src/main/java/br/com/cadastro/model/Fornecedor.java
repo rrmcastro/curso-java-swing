@@ -8,6 +8,14 @@ public class Fornecedor {
 	private String razaoSocial;
 	private String telefone;
 	
+	public Fornecedor(String codigoFornecedor, String nome, String razaoSocial, String telefone) {
+		super();
+		this.codigoFornecedor = codigoFornecedor;
+		this.nome = nome;
+		this.razaoSocial = razaoSocial;
+		this.telefone = telefone;
+	}
+	
 	public String getCodigoFornecedor() {
 		return codigoFornecedor;
 	}

@@ -9,26 +9,27 @@ import java.util.logging.Logger;
 public class ConexaoMysqlJDBC implements ConexaoJDBC{
 	
 	private Connection connection = null;
-	
+
 	private static final String USERNAME = "root";
-	
-	// Senha do MySQL
-	private static final String PASSWORD = "123456";
-	
-	// Dados de caminho, porta e nome da base de dados que ir· ser feita a conex„o
-	private static final String DATABASE_URL = "jdbc:mysql://127.0.0.1:3306/cadastro"
-													+ "?useTimezone=true&serverTimezone=UTC";
-	
+
+	// Senha do mysql
+	private static final String PASSWORD = "";
+
+	// Dados de caminho, porta e nome da base de dados que ir√° ser feita a conex√£o
+	private static final String DATABASE_URL = "jdbc:mysql://127.0.0.1:3306/cadastro?useTimezone=true&serverTimezone=UTC";
+
 	public ConexaoMysqlJDBC() throws SQLException, ClassNotFoundException {
-		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName("com.mysql.cj.jdbc.Driver");
 		this.connection = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
 		this.connection.setAutoCommit(false);
 	}
-	
+
+	@Override
 	public Connection getConnection() {
 		return this.connection;
 	}
-	
+
+	@Override
 	public void close() {
 		if (this.connection != null) {
 			try {
@@ -38,12 +39,14 @@ public class ConexaoMysqlJDBC implements ConexaoJDBC{
 			}
 		}
 	}
-	
+
+	@Override
 	public void commit() throws SQLException {
 		this.connection.commit();
 		this.close();
 	}
-	
+
+	@Override
 	public void rollback() {
 		if (this.connection != null) {
 			try {
